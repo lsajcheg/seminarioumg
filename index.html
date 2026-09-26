@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo Educativo</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">Catálogo Educativo</div>
+  <nav class="nav">
+    <button id="btnLoginOpen">Iniciar sesión</button>
+    <button id="btnRegisterOpen" class="btn-secondary">Registrarse</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Videos educativos</h1>
+  <p>Explora contenido académico organizado por categorías</p>
+</section>
+
+<section class="filters">
+  <input id="search" placeholder="Buscar por título...">
+  <div class="categories" id="categoryList"></div>
+</section>
+
+<section class="grid" id="videoGrid"></section>
+
+<!-- Modal Video -->
+<div class="modal" id="modalVideo">
+  <div class="modal-content">
+    <span class="close" id="closeVideo">✖</span>
+    <h2 id="modalTitle"></h2>
+    <video id="modalPlayer" width="100%" controls></video>
+  </div>
+</div>
+
+<!-- Modal Login -->
+<div class="modal" id="modalLogin">
+  <div class="modal-content small">
+    <span class="close" id="closeLogin">✖</span>
+    <h2>Iniciar sesión</h2>
+    <input id="loginUser" placeholder="Carné o correo">
+    <input id="loginPass" type="password" placeholder="PIN">
+    <button id="btnLogin">Ingresar</button>
+    <div id="loginMsg" class="msg"></div>
+  </div>
+</div>
+
+<!-- Modal Registro -->
+<div class="modal" id="modalRegister">
+  <div class="modal-content small">
+    <span class="close" id="closeRegister">✖</span>
+    <h2>Registro de estudiante</h2>
+    <input id="regCarne" placeholder="9999-99-99999">
+    <input id="regNombre" placeholder="Nombre completo">
+    <input id="regCorreo" placeholder="correo@ejemplo.com">
+    <input id="regPassword" type="password" placeholder="PIN numérico">
+    <button id="btnRegistrar">Registrar</button>
+    <div id="regMsg" class="msg"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
